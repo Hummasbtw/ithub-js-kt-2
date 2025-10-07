@@ -10,7 +10,7 @@ export function renderLadder(height) {
 
   const h = Number(height);
 
-  if (h < 0) {
+  if (h < 0 || !Number.isInteger) {
     throw new Error("Некорректные входные данные");
   }
 
@@ -23,6 +23,8 @@ export function renderLadder(height) {
   }
 
   let result = "";
+
+  
 
   return result;
 }
